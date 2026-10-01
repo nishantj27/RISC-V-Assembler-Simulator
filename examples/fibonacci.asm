@@ -1,0 +1,21 @@
+# Compute the tenth Fibonacci number. The result is left in a1.
+addi a0,zero,10
+addi t0,zero,0
+addi t1,zero,1
+addi t2,zero,1
+
+beq a0,zero,fib_zero
+beq a0,t2,fib_one
+
+fib_loop: add a1,t0,t1
+addi t0,t1,0
+addi t1,a1,0
+addi t2,t2,1
+bne t2,a0,fib_loop
+jal zero,done
+
+fib_zero: addi a1,zero,0
+jal zero,done
+fib_one: addi a1,zero,1
+
+done: beq zero,zero,0
