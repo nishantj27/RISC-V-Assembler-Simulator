@@ -1,4 +1,4 @@
-# RV32I Assembler and Simulator
+# RISC-V32I Assembler and Simulator
 
 A dependency-free Python implementation of the Computer Organization project. It translates a practical RV32I subset from assembly into 32-bit machine code, executes that code, and emits the exact register/memory trace format expected by the supplied course frameworks.
 
